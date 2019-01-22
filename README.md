@@ -24,3 +24,4 @@ sudo ln -s /usr/local/bin/pykawlan.py 02pykawlan
 # Notes
 - You can turn off the check whether the computer is connected to KA-WLAN. This might be a problem if nmcli is not available.
 - `mechanize` is not available for Python 3, so Python 2 was used
+- Q: *Why would you use KA-WLAN if you could use KA-sWLAN instead without captive portal?* - A: No account needed and sometimes one tends to be more stable than the other.
