@@ -4,18 +4,25 @@ Automatically sign in to KA-WLAN network under Linux
 This script checks whether a computer is connected to the [KA-WLAN](https://www.ka-wlan.de/) network of Karlsruhe, Germany, and - if yes - automatically accepts the terms of use so the internet connection is established without user interaction. The author is *not affiliated with KA-WLAN* in any way.  
 
 # Setup
-1. Download script
+1. Install dependencies
+```bash
+# on Debian/Ubuntu etc.
+sudo apt install python-mechanize
+# if package is not available
+sudo pip install mechanize
+```
+2. Download script
 ```bash
 cd /tmp
 git clone https://github.com/nspo/pykawlan.git
 ```
-2. Make script accessible
+3. Make script accessible
 ```bash
 cd pykawlan
 chmod +x pykawlan.py
 sudo cp pykawlan.py /usr/local/bin/
 ```
-3. If you want it to automatically execute when NetworkManager connects to a network:
+4. If you want it to automatically execute when NetworkManager connects to a network:
 ```bash
 cd /etc/NetworkManager/dispatcher.d/
 sudo ln -s /usr/local/bin/pykawlan.py 02pykawlan
