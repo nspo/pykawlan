@@ -7,8 +7,8 @@ This script checks whether a computer is connected to the [KA-WLAN](https://www.
 1. Install dependencies
 ```bash
 # on Debian/Ubuntu etc.
-sudo apt install python-mechanize
-# if package is not available
+sudo apt install python-mechanize git
+# if python-mechanize package is not available
 sudo pip install mechanize
 ```
 2. Download script
